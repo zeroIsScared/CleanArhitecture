@@ -1,4 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿
+// See https://aka.ms/new-console-template for more information
 using Ecomerce.Aplication.Abstractions;
 using Ecomerce.Aplication.RealEstates.Create;
 using Ecomerce.Aplication.Users.Create;
@@ -16,7 +17,7 @@ var diContainer = new ServiceCollection()
     .AddSingleton<IUserRepository, UserRepository>()
     .AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(IUserRepository).Assembly))
     .BuildServiceProvider();
-    
+
 
 var mediator = diContainer.GetRequiredService<IMediator>();
 
